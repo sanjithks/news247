@@ -1,13 +1,13 @@
-    <div class="grid-container">
-        {% for post in postslist %}
-            <div class="grid-item">
-                <strong>
-                    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-                </strong>
-                -
-                <span>
-                    {{ post.data.description }}
-                </span>
-            </div>
-        {% endfor %}
-    </div>
+<ul>
+{% for post in postslist %}
+    <li>
+        <strong>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </strong>    
+        -
+        <span>
+            {{ post.data.description }}
+        </span>    
+    </li>
+{% endfor %}
+</ul>
